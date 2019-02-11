@@ -1,0 +1,7 @@
+.jumbotron {
+    text-align: center;
+    background-image: url("friends.jpg");
+    opacity: 0.80;
+    height: 1000px;
+}
+
