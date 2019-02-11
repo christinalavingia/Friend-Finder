@@ -1,228 +1,233 @@
 <!DOCTYPE html>
-<html lang= "en-us">
-    <head>
-        <meta charset = "UTF-8">
-        <title>Friend Finder Survey</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="style/style.css">
-        <script src="https://code.jquery.com/jquery.js"></script>
-    </head>
+<html lang="en-us">
 
-    <body id="survey">
-        <div class="container">
-            <div id="header">
-                <h1 class="display-1">Survey Questions</h1>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder Survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
 
-            <form>
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="name">Name (Required)</label>
-                        <input type="text" class="form-control" id="name">
+<body id="survey">
+    <div class="container">
+        <div id="header">
+            <h1 class="display-1">Survey Questions</h1>
+        </div>
 
-                        <label for="image">Photo Link (Required)</label>
-                        <input type="text" class="form-control" id="image">
+        <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="name">Name (Required)</label>
+                    <input type="text" class="form-control" id="name">
 
-                        <label for="question-1">1. You prefer reading a book over watching TV.</label>
-                        <br>
-                        <select class="col-md-4" id="question-1">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="image">Photo Link (Required)</label>
+                    <input type="text" class="form-control" id="image">
 
-                        <label for="question-2">2. You pride yourself on being a good listener.</label>
-                        <br>
-                        <select class="col-md-4" id="question-2">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-1">1. You prefer reading a book over watching TV.</label>
+                    <br>
+                    <select class="col-md-4" id="question-1">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-3">3. You prefer the great outdoors to a bustling city.</label>
-                        <br>
-                        <select class="col-md-4" id="question-3">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-2">2. You pride yourself on being a good listener.</label>
+                    <br>
+                    <select class="col-md-4" id="question-2">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-4">4. You get energized in group settings.</label>
-                        <br>
-                        <select class="col-md-4" id="question-4">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-3">3. You prefer the great outdoors to a bustling city.</label>
+                    <br>
+                    <select class="col-md-4" id="question-3">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-5">5. You prefer maintaining a small group of strong friends.</label>
-                        <br>
-                        <select class="col-md-4" id="question-5">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-4">4. You get energized in group settings.</label>
+                    <br>
+                    <select class="col-md-4" id="question-4">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-6">6. You enjoy challenging the status quo.</label>
-                        <br>
-                        <select class="col-md-4" id="question-6">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-5">5. You prefer maintaining a small group of strong friends.</label>
+                    <br>
+                    <select class="col-md-4" id="question-5">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-7">7. You align yourself with those who have a sense of adventure.</label>
-                        <br>
-                        <select class="col-md-4" id="question-7">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-6">6. You enjoy challenging the status quo.</label>
+                    <br>
+                    <select class="col-md-4" id="question-6">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-8">8. You believe in the importance of having a strong opinion.</label>
-                        <br>
-                        <select class="col-md-4" id="question-8">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-7">7. You align yourself with those who have a sense of adventure.</label>
+                    <br>
+                    <select class="col-md-4" id="question-7">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        <label for="question-9">9. You value deep conversation over casual interactions.</label>
-                        <br>
-                        <select class="col-md-4" id="question-9">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
-                        <br>
+                    <label for="question-8">8. You believe in the importance of having a strong opinion.</label>
+                    <br>
+                    <select class="col-md-4" id="question-8">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                        
-                        <label for="question-10">10. You prefer staying in over going out.</label>
-                        <br>
-                        <select class="col-md-4" id="question-10">
-                            <option selected="true" disabled="disabled">Select an Option</option>
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                        </select>
+                    <label for="question-9">9. You value deep conversation over casual interactions.</label>
+                    <br>
+                    <select class="col-md-4" id="question-9">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
+                    <br>
 
-                    </div>
 
-                </form>
-
-                <div class="text-center">
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="submit-btn" data-target="#myModal">Get Ready for Friendship</button>
-
-            <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h2 class="modal-title">Here's Your Best Match</h2>
-                        </div>
-                        <div class="modal-body">
-                          <h3 id="matchName"></h3>
-                          <img id="matchImg" src="">
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                
-                    </div>
-                  </div>
+                    <label for="question-10">10. You prefer staying in over going out.</label>
+                    <br>
+                    <select class="col-md-4" id="question-10">
+                        <option selected="true" disabled="disabled">Select an Option</option>
+                        <option value="1">1 (Strongly Agree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Disagree)</option>
+                    </select>
 
                 </div>
 
-    </body>
+        </form>
 
-        <script type="text/javascript">
-            $("#submit-btn").on("click", function(event) {
-                event.preventDefault();
-                var valid = true;
-                if($("#name").val() === "" || $("#photo").val() === "") {
-                    valid = false;
-                } else if ($("#question-1").val() === "" || $("#question-2").val() === "" || $("#question-3").val() === "" || $("#question-4").val() === "" || $("#question-5").val() === "" || $("#question-6").val() === "" || $("#question-7").val() === "" || $("#question-8").val() === "" || $("#question-9").val() === "" || $("#question-10").val() === "") 
-                    valid = false;
+        <div class="text-center">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="submit-btn" data-target="#myModal">Get
+                Ready for Friendship</button>
 
-                if (valid === true) {
-                    var userInput = {
-                        name: $("#name").val().trim(),
-                        photo: $("#image").val().trim(),
-                        scores: [
-                            $("#question-1").val().trim(),
-                            $("#question-2").val().trim(),
-                            $("#question-3").val().trim(),
-                            $("#question-4").val().trim(),
-                            $("#question-5").val().trim(),
-                            $("#question-6").val().trim(),
-                            $("#question-7").val().trim(),
-                            $("#question-8").val().trim(),
-                            $("#question-9").val().trim(),
-                            $("#question-10").val().trim(),
-                        ]
-                    };
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Here's Your Best Match</h2>
+                        </div>
+                        <div class="modal-body">
+                            <h3 id="matchName"></h3>
+                            <img id="matchImg" src="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
 
-                    var pageURL = window.location.origin;
-                    // $.post(pageURL + "api/friends", userInput, function(data) {
-                    //     $("#matchName").text(data.name);
-                    //     $("#matchImage").attr("src", data.photo);
-                    // });
-  
-                        $("#name").val("");
-                        $("#image").val("");
-                        $("#question-1").val("");
-                        $("#question-2").val("");
-                        $("#question-3").val("");
-                        $("#question-4").val("");
-                        $("#question-5").val("");
-                        $("#question-6").val("");
-                        $("#question-7").val("");
-                        $("#question-8").val("");
-                        $("#question-9").val("");
-                        $("#question-10").val("");
+                </div>
+            </div>
 
-                } else {
-                    alert("Please fill out all fields before submitting.");
-                }
-            });
-        
-        </script>
+        </div>
+
+</body>
+
+<script type="text/javascript">
+    $("#submit-btn").on("click", function (event) {
+        event.preventDefault();
+        var valid = true;
+        if ($("#name").val() === "" || $("#photo").val() === "") {
+            valid = false;
+        } else if ($("#question-1").val() === "" || $("#question-2").val() === "" || $("#question-3").val() === "" || $("#question-4").val() === "" || $("#question-5").val() === "" || $("#question-6").val() === "" || $("#question-7").val() === "" || $("#question-8").val() === "" || $("#question-9").val() === "" || $("#question-10").val() === "")
+            valid = false;
+
+        if (valid === true) {
+            var userInput = {
+                name: $("#name").val().trim(),
+                photo: $("#image").val().trim(),
+                scores: [
+                    $("#question-1").val().trim(),
+                    $("#question-2").val().trim(),
+                    $("#question-3").val().trim(),
+                    $("#question-4").val().trim(),
+                    $("#question-5").val().trim(),
+                    $("#question-6").val().trim(),
+                    $("#question-7").val().trim(),
+                    $("#question-8").val().trim(),
+                    $("#question-9").val().trim(),
+                    $("#question-10").val().trim(),
+                ]
+            };
+
+            var pageURL = window.location.origin;
+            // $.post(pageURL + "api/friends", userInput, function(data) {
+            //     $("#matchName").text(data.name);
+            //     $("#matchImage").attr("src", data.photo);
+                // $("#myModal").modal('toggle');
+            // });
+
+            $("#name").val("");
+            $("#image").val("");
+            $("#question-1").val("");
+            $("#question-2").val("");
+            $("#question-3").val("");
+            $("#question-4").val("");
+            $("#question-5").val("");
+            $("#question-6").val("");
+            $("#question-7").val("");
+            $("#question-8").val("");
+            $("#question-9").val("");
+            $("#question-10").val("");
+
+        } else {
+            alert("Please fill out all fields before submitting.");
+        }
+    });
+
+</script>
+
 </html>
