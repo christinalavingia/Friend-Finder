@@ -18,10 +18,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <label for="name">Name (Required)</label>
-                        <input type="text" class="form-control" id="name" required>
+                        <input type="text" class="form-control" id="name">
 
                         <label for="image">Photo Link (Required)</label>
-                        <input type="text" class="form-control" id="image" required>
+                        <input type="text" class="form-control" id="image">
 
                         <label for="question-1">1. You prefer reading a book over watching TV.</label>
                         <br>
@@ -143,14 +143,86 @@
                             <option value="5">5 (Strongly Disagree)</option>
                         </select>
 
-                        <br>
-                        <button class="btn btn-primary" type="submit" id="submit">Get Ready for Friendship</button>
-
                     </div>
+
+                </form>
+
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit" id="submit-btn">Get Ready for Friendship</button>
                 </div>
-            </form>
-        </div>
+            </div>
+
+            <div id="resultsModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h2>Here's Your Best Match</h2>
+                        </div>
+                        <div class="modal-body">
+                          <h3 id="matchName"></h3>
+                          <img id="matchImg" src="">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                
+                    </div>
+                  </div>
 
     </body>
 
+        <script type="text/javascript">
+            $("#submit-btn").on("click", function(event) {
+                event.preventDefault();
+                var valid = true;
+                if($("#name").val() === "" || $("#photo").val() === "") {
+                    valid = false;
+                } else if ($("#question-1").val() === "" || $("#question-2").val() === "" || $("#question-3").val() === "" || $("#question-4").val() === "" || $("#question-5").val() === "" || $("#question-6").val() === "" || $("#question-7").val() === "" || $("#question-8").val() === "" || $("#question-9").val() === "" || $("#question-10").val() === "") 
+                    valid = false;
+
+                if (valid === true) {
+                    var userInput = {
+                        name: $("#name").val().trim(),
+                        photo: $("#image").val().trim(),
+                        scores: [
+                            $("#question-1").val().trim(),
+                            $("#question-2").val().trim(),
+                            $("#question-3").val().trim(),
+                            $("#question-4").val().trim(),
+                            $("#question-5").val().trim(),
+                            $("#question-6").val().trim(),
+                            $("#question-7").val().trim(),
+                            $("#question-8").val().trim(),
+                            $("#question-9").val().trim(),
+                            $("#question-10").val().trim(),
+                        ]
+                    };
+
+                    var pageURL = window.location.origin;
+                    // $.post(pageURL + "api/friends", userInput, function(data) {
+                    //     $("#matchName").text(data.name);
+                    //     $("#matchImage").attr("src", data.photo);
+                    // });
+  
+                        $("#name").val("");
+                        $("#image").val("");
+                        $("#question-1").val("");
+                        $("#question-2").val("");
+                        $("#question-3").val("");
+                        $("#question-4").val("");
+                        $("#question-5").val("");
+                        $("#question-6").val("");
+                        $("#question-7").val("");
+                        $("#question-8").val("");
+                        $("#question-9").val("");
+                        $("#question-10").val("");
+
+                } else {
+                    alert("Please fill out all fields before submitting.");
+                }
+            });
+        
+        </script>
 </html>
