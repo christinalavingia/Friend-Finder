@@ -5,3 +5,30 @@
     height: 1000px;
 }
 
+input {
+    margin-bottom: 10px;
+}
+
+#survey {
+    background-color: #BECADD;
+}
+
+#survey-btn {
+    background-color: #BECADD;
+    color: black;
+    border: solid 1px black;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+#submit {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: solid 1 white;
+}
+
+
+
