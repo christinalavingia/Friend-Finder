@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
+    <link type="text/css" href="assets/style.css">
 </head>
 
 <body id="survey">
@@ -149,7 +149,7 @@
 
         </form>
 
-        <div class="text-center">
+        <!-- <div class="text-center">
             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="submit-btn" data-target="#myModal">Get
                 Ready for Friendship</button>
 
@@ -172,7 +172,34 @@
                 </div>
             </div>
 
+        </div> -->
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="submit-btn">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+              
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span>&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
@@ -204,24 +231,24 @@
             };
 
             var pageURL = window.location.origin;
-            // $.post(pageURL + "api/friends", userInput, function(data) {
-            //     $("#matchName").text(data.name);
-            //     $("#matchImage").attr("src", data.photo);
-                // $("#myModal").modal('toggle');
-            // });
+            $.post(pageURL + "api/friends", userInput, function(data) {
+                $("#matchName").text(data.name);
+                $("#matchImage").attr("src", data.photo);
+                $("#exampleModalCenter").modal('toggle');
+            });
 
             $("#name").val("");
             $("#image").val("");
-            $("#question-1").val("");
-            $("#question-2").val("");
-            $("#question-3").val("");
-            $("#question-4").val("");
-            $("#question-5").val("");
-            $("#question-6").val("");
-            $("#question-7").val("");
-            $("#question-8").val("");
-            $("#question-9").val("");
-            $("#question-10").val("");
+            $("#question-1").val("Select an Option");
+            $("#question-2").val("Select an Option");
+            $("#question-3").val("Select an Option");
+            $("#question-4").val("Select an Option");
+            $("#question-5").val("Select an Option");
+            $("#question-6").val("Select an Option");
+            $("#question-7").val("Select an Option");
+            $("#question-8").val("Select an Option");
+            $("#question-9").val("Select an Option");
+            $("#question-10").val("Select an Option");
 
         } else {
             alert("Please fill out all fields before submitting.");
