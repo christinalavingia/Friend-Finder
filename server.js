@@ -10,6 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.app+json" }));
 
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "./public/home.html"));
+});
+
+app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "./public/survey.html"));
+});
+
 require("./routing/apiRoutes.js")(app);
 require("./routing/htmlRoutes.js")(app);
 
