@@ -1,4 +1,4 @@
-var userInput = [
+var friends = [
     {
         "name": "Jim",
         "photo": "https://pbs.twimg.com/profile_images/3171824697/ef75d90df2e65ce326acf30262df5918_400x400.jpeg",
@@ -49,4 +49,4 @@ var userInput = [
     }
 ];
 
-module.exports = userInput;
+module.exports = friends;
