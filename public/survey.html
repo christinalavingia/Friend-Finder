@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <title>Friend Finder Survey</title>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
@@ -151,53 +153,29 @@
 
         </form>
 
-        <!-- <div class="text-center">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="submit-btn" data-target="#myModal">Get
-                Ready for Friendship</button>
+        <button type="button" class="btn btn-primary" id="submit-btn">
+            Get Ready for Friendship
+        </button>
 
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h2 class="modal-title">Here's Your Best Match</h2>
-                        </div>
-                        <div class="modal-body">
-                            <h3 id="matchName"></h3>
-                            <img id="matchImg" src="">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Here's Your Best Match!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span>&times;</span>
+                        </button>
                     </div>
-
+                    <div class="modal-body">
+                        <h3 id="matchName"></h3>
+                        <img id="matchImg" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-
-        </div> -->
-
-<button type="button" class="btn btn-primary" id="submit-btn">
-    Get Ready for Friendship
-  </button>
-  
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">          
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Here's Your Best Match</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span>&times;</span>
-          </button>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </body>
 
@@ -205,54 +183,57 @@
     $("#submit-btn").on("click", function (event) {
         event.preventDefault();
 
-        var valid = true;
-        if ($("#name").val() === "" || $("#photo").val() === "" || $("#question-1").val() === "" || $("#question-2").val() === "" || $("#question-3").val() === "" || $("#question-4").val() === "" || $("#question-5").val() === "" || $("#question-6").val() === "" || $("#question-7").val() === "" || $("#question-8").val() === "" || $("#question-9").val() === "" || $("#question-10").val() === "")
-            valid = false;
-
-        if (valid === true) {
-            var userInput = {
-                name: $("#name").val().trim(),
-                photo: $("#image").val().trim(),
-                scores: [
-                    $("#question-1").val().trim(),
-                    $("#question-2").val().trim(),
-                    $("#question-3").val().trim(),
-                    $("#question-4").val().trim(),
-                    $("#question-5").val().trim(),
-                    $("#question-6").val().trim(),
-                    $("#question-7").val().trim(),
-                    $("#question-8").val().trim(),
-                    $("#question-9").val().trim(),
-                    $("#question-10").val().trim(),
-                ]
-            };
+        if ($("#name").val() === "" || $("#image").val() === "" || $("#question-1").val() === null || $("#question-2").val() === null || $("#question-3").val() === null || $("#question-4").val() === null || $("#question-5").val() === null || $("#question-6").val() === null || $("#question-7").val() === null || $("#question-8").val() === null || $("#question-9").val() === null || $("#question-10").val() === null) {
+            alert("Please fill out all fields before submitting.");
+        } else {
+            var userInput = getUserInput();
+            console.log(userInput);
 
             var pageURL = window.location.origin;
-            $.post(pageURL + "api/friends", userInput, function(data) {
+            $.post(pageURL + "/api/friends", userInput, function (data) {
                 $("#matchName").text(data.name);
                 $("#matchImage").attr("src", data.photo);
                 $("#myModal").modal("show");
             });
 
-            $("#name").val("");
-            $("#image").val("");
-            $("#question-1").val("Select an Option");
-            $("#question-2").val("Select an Option");
-            $("#question-3").val("Select an Option");
-            $("#question-4").val("Select an Option");
-            $("#question-5").val("Select an Option");
-            $("#question-6").val("Select an Option");
-            $("#question-7").val("Select an Option");
-            $("#question-8").val("Select an Option");
-            $("#question-9").val("Select an Option");
-            $("#question-10").val("Select an Option");
-
-        } else {
-            alert("Please fill out all fields before submitting.");
+            reset();
         }
     });
 
+    function reset() {
+        $("#name").val("");
+        $("#image").val("");
+        $("#question-1").val("Select an Option");
+        $("#question-2").val("Select an Option");
+        $("#question-3").val("Select an Option");
+        $("#question-4").val("Select an Option");
+        $("#question-5").val("Select an Option");
+        $("#question-6").val("Select an Option");
+        $("#question-7").val("Select an Option");
+        $("#question-8").val("Select an Option");
+        $("#question-9").val("Select an Option");
+        $("#question-10").val("Select an Option");
+    }
 
+    function getUserInput() {
+        return {
+            name: $("#name").val().trim(),
+            photo: $("#image").val().trim(),
+            scores: [
+                $("#question-1").val().trim(),
+                $("#question-2").val().trim(),
+                $("#question-3").val().trim(),
+                $("#question-4").val().trim(),
+                $("#question-5").val().trim(),
+                $("#question-6").val().trim(),
+                $("#question-7").val().trim(),
+                $("#question-8").val().trim(),
+                $("#question-9").val().trim(),
+                $("#question-10").val().trim(),
+            ]
+        };
+
+    }
 </script>
 
 
