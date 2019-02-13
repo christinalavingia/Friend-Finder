@@ -2,15 +2,15 @@ var path = require("path");
 var express = require("express");
 
 module.exports = function (app) {
-    app.use(express.static(__dirname + '/public'));
+    // app.use(express.static(__dirname + '/public'));
 
-    app.use("/survey", function (req,res) {
-        res.sendFile(path.join(__dirname + "../public/survey.html"))
+    app.get("/survey", function (req,res) {
+        res.sendFile(path.join(__dirname, "../public/survey.html"))
     });
 
-    app.use("/", function (req, res) {
-        res.sendFile(path.join(__dirname + "../public/home.html"));
+    app.get("/", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 
-    app.use(express.static(__dirname + "../public/assets/"));
+    app.use("/assets", express.static(path.join(__dirname, "../public/assets/")));
 };
