@@ -31,7 +31,14 @@ select {
     margin-left: 15px;
 }
 
+#modal-btn {
+    background-color: black;
+    color: white;
+}
 
-
-
-
+img {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
