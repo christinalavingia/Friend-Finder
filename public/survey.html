@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <title>Friend Finder Survey</title>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <link type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 </head>
 
 <body id="survey">
@@ -174,18 +176,16 @@
 
         </div> -->
 
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="submit-btn">
-    Launch demo modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="submit-btn">
+    Get Ready for Friendship
   </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
               
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+          <h5 class="modal-title">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span>&times;</span>
           </button>
@@ -195,7 +195,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
@@ -234,7 +233,7 @@
             $.post(pageURL + "api/friends", userInput, function(data) {
                 $("#matchName").text(data.name);
                 $("#matchImage").attr("src", data.photo);
-                $("#exampleModalCenter").modal('toggle');
+                $("#myModal").modal('toggle');
             });
 
             $("#name").val("");
@@ -255,6 +254,8 @@
         }
     });
 
+
 </script>
+
 
 </html>
