@@ -12,7 +12,7 @@ On the backend, the user's inputs have been stored so the next person to take th
 
 ## Technology
 
-This app was written in jQuery, HTML and CSS for the frontend. The following NPM packages were required for the server:
+This app was written in jQuery, HTML, Bootstrap and CSS for the frontend. The following NPM packages were required for the server:
 
 * Path
 * Express
@@ -21,3 +21,5 @@ This app was written in jQuery, HTML and CSS for the frontend. The following NPM
 Because this is a full front and backend app, Express is used to help route files from the client-side to the server-side and back. 
 
 Locally, a user would have to install Node and run $ node server.js to kick-start a server, interact with the page at localhost:8080, and have data persist between different submissions. The app is served, now, in Heroku so anyone with the Heroku link can take advantage of its servers to handle this in a more user-friendly way. 
+
+The app is pre-configured with sample data (starring "The Office" characters Jim, Pam and Dwight). This will allow any user to receive a functional experience upon first survey submission. 
