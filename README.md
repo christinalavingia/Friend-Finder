@@ -6,9 +6,9 @@
 
 Much like commonplace dating apps, the Friend Finder app identifies people with similar personalities to the user. The user first clicks "Meet Your New Best Friend" to launch the quiz. The quiz consists of 10 questions designed to identify elements of the user's personality. When the survey is fully complete (meaning a name, image URL and all 10 questions have a response), the user will click "Get Ready for Friendship." 
 
-This action will trigger a modal on the client side that will name the user's best match and display their submitted photo. The best match is one that most closely mirrors the answers the user provided in the quiz.
+This action will trigger a modal on the client side that will name the user's best match and display their submitted photo. The best match is one that most closely mirrors the answers the user provided in the quiz. The best match is retrieved from the friends array stored in friends.js and expored via module.exports.
 
-On the backend, the user's inputs have been stored so the next person to take the quiz can be served up this user in addition to those existing in the database. With more submissions, the database becomes larger and richer, allowing for more accurate matches.
+On the backend, the user's inputs have been stored so the next person to take the quiz can be served up this user in addition to those existing in the database. With more submissions, the database (the friends array) becomes larger and richer, allowing for more similar matches.
 
 ## Technology
 
